@@ -63,6 +63,7 @@ class Kernel extends HttpKernel
         'api' => [
             // 使用别名来调用中间件
             // 请见：https://d.laravel-china.org/docs/5.5/middleware#为路由分配中间件
+            \App\Http\Middleware\AcceptHeader::class,
             'throttle:60,1',
             'bindings',
         ],
